@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>JS TASK-3</TITLE>
+<LINK href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</HEAD>
+<BODY>
+<FORM>
+<TABLE>
+<TR>
+<TD>1st Number</TD>
+<TD><INPUT type="text" name="num1" id="n1"></TD>
+</TR>
+<TR>
+<TD>2nd Number</TD>
+<TD><INPUT type="text" name="num1" id="n2"></TD>
+</TR>
+</TABLE>
+<INPUT type="button" value="Multiply" id="m1" onclick="multiply()">
+<INPUT type="button" value="Divide" id="d1" onclick="divide()">
+</FORM>
+<BR>
+<P>The result is <B id="ans"></B></P>
+<SCRIPT>
+function divide()
+{
+	//alert(document.getElementById("n1").value);
+	var a=document.getElementById("n1").value;
+	var b=document.getElementById("n2").value;
+	var c=a/b;
+	//document.write(c);
+	document.getElementById("ans").innerHTML=c;
+}
+function multiply()
+{
+	//alert(document.getElementById("n1").value);
+	var a=document.getElementById("n1").value;
+	var b=document.getElementById("n2").value;
+	var c=a*b;
+	//document.write(c);
+	document.getElementById("ans").innerHTML=c;
+}
+</SCRIPT>
+</BODY>
+</HTML>

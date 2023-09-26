@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>JS TASK-7</TITLE>
+<STYLE>
+@keyframes moveRight
+{
+0%{left:0;}
+100%{left: calc(100% - 100px);}
+}
+#a1{
+position:absolute;
+left:0;
+animation:moveRight 5s linear infinite;
+}
+</STYLE>
+</HEAD>
+<BODY>
+<FONT size="5" color="blue">Click the following buttons to handle Animation</FONT>
+<BR>
+<FORM>
+<INPUT id="s1" type="button" value="Start">
+<INPUT id="e1" type="button" value="Stop">
+</FORM>
+<IMG src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZgF9bMagpG0UA1iMLdOZPcJvA1ocAzSjNkQ&usqp=CAU" id="a1">
+<SCRIPT>
+const start=document.getElementById("s1");
+const stop=document.getElementById("e1");
+const ani=document.getElementById("a1");
+function startt()
+{
+	ani.style.animationPlayState = 'running';
+}
+function stopt()
+{
+	ani.style.animationPlayState = 'paused';
+}
+start.addEventListener('click',startt);
+stop.addEventListener('click',stopt);
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>JS TASK-6</TITLE>
+<LINK href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<STYLE>
+</STYLE>
+</HEAD>
+<BODY style="background-color:#E5E4E2;">
+<FORM class="form">
+<FONT size="5" face="Times New Roman" style="margin-left:40px"><I>Instagram</I></FONT>
+<TABLE width="500px">
+<TR>
+<TD class="border border-secondary-subtle" style="background-color:white;"><IMG src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" height="20px" width="20px"></TD>
+<TD ><INPUT id="u1" type="text" size="20" name="Firstname" maxlength="20" ></TD>
+<TD ><FONT color="red"><P id="r1"></P></FONT></TD>
+</TR>
+<TR>
+<TD class="border border-secondary-subtle" style="background-color:white;"><IMG src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-circle-password-icon-vectors-png-image_5053796.jpg" height="20px" width="20px"></TD>
+<TD ><INPUT id="p1" type="password" size="20" name="Lastname"  maxlength="20" ></TD>
+<TD><FONT color="red"><P id="r2"></P></FONT></TD>
+</TR>
+</TABLE>
+<BR><INPUT style="background-color:#0000FF;border-color:#0000FF;border-radius:3px;color:white;width:230px;" type="button" name="Log in" value="Log in" onclick="check()"> 
+<BR>
+<INPUT type="checkbox" size="70" name="l4" maxlength="20" value="declarartion">Remember Me</TD>
+<BR>
+<A href="https://www.instagram.com/" style="color:#0000FF;text-decoration:none;">Forget Password?</A>
+<BR>
+Don't have an account <A href="https://www.instagram.com/" style="color:#0000FF;text-decoration:none;">sign up here</A>
+</FORM>
+<SCRIPT>
+function check()
+{
+	var a=document.getElementById("u1").value;
+	var b=document.getElementById("p1").value;
+	var la=a.length;
+	var lb=b.length;
+	//alert(la+" "+lb+" "+a+" "+b);
+	if(la==0)
+	{
+		document.getElementById("r1").innerHTML="This field is required";
+	}
+	if(lb==0)
+	{
+		document.getElementById("r2").innerHTML="This field is required";
+	}
+	
+}
+</SCRIPT>
+</BODY>
+</HTML>

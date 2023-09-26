@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>JS TASK-5</TITLE>
+</HEAD>
+<BODY>
+<FORM>
+<TABLE  cellspacing="3">
+<TR>
+<TD>Name:</TD>
+<TD><INPUT id="n1" type="text" name="name" size="30" maxlength="30"></TD>
+<TD><FONT color="red"><P id="r1"></P></FONT></TD>
+</TR>
+<TR>
+<TD>Email:</TD>
+<TD><INPUT id="e1" type="text" name="email" size="30" maxlength="30"></TD>
+<TD><FONT color="red"><P style="color=red;"id="r2"></P></FONT></TD>
+</TR>
+<TR>
+<TD>Website:</TD>
+<TD><INPUT id="w1" type="text" name="site" size="30" maxlength="30"></TD>
+<TD><FONT color="red"><P id="r3"></P></FONT></TD>
+</TR>
+<TR>
+<TD>Message</TD>
+<TD><TEXTAREA id="m1" name="message" cols="23" rows="3"></TEXTAREA></TD>
+<TD><FONT color="red"><P id="r4"></P></FONT></TD>
+</TR>
+</TABLE>
+<BR>
+<INPUT type="button" value="submit" onclick="check()">
+</FORM>
+<SCRIPT>
+function check()
+{
+	var a=document.getElementById("n1").value;
+	var b=document.getElementById("e1").value;
+	var c=document.getElementById("w1").value;
+	var d=document.getElementById("m1").value;
+	//alert(a+" "+b+" "+c+" "+d);
+	l1=a.length;
+	l2=b.length;
+	l3=c.length;
+	l4=d.length;
+	//alert(l1+" "+l2+" "+l3+" "+l4);
+	if(l1==0)
+	{
+		document.getElementById("r1").innerHTML="This field is required";
+	}
+	if(l2==0)
+	{
+		document.getElementById("r2").innerHTML="A valid Email address is required";
+	}
+	if(l3==0)
+	{
+		document.getElementById("r3").innerHTML="A valid URL is required";
+	}
+	if(l4==0)
+	{
+		document.getElementById("r4").innerHTML="This field is required";
+	}
+}
+</SCRIPT>
+</BODY>
+</HTML>

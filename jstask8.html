@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+<TITLE>JS TASK-8</TITLE>
+</HEAD>
+<BODY style="background:linear-gradient(135deg,#FFFFC2,#C45AEC);">
+<H2>
+<FONT  color="blue">
+<CENTER>Registration form</CENTER></FONT></H2>
+<FORM method="post">
+<TABLE align="center" cellspacing="0" cellpadding="2">
+<TR>
+<TD align="center" >First Name</TD>
+<TD ><INPUT id="f1" type="text" size="70" name="Firstname" maxlength="20" onkeyup="checkf()"></TD>
+<TD><FONT color="red" id="r1"></FONT><FONT color="green" id="g1"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Last Name</TD>
+<TD ><INPUT id="l1" type="text" size="70" name="Lastname" maxlength="20" onkeyup="checkl()"></TD>
+<TD><FONT color="red" id="r2"></FONT><FONT color="green" id="g2"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Email</TD>
+<TD ><INPUT id="e1" type="text" size="70" name="Email" maxlength="20" onkeyup="checke()"></TD>
+<TD><FONT color="red" id="r3"></FONT><FONT color="green" id="g3"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Password</TD>
+<TD ><INPUT id="p1" type="password" size="70" name="password" maxlength="20" onkeyup="checkp()"></TD>
+<TD><FONT color="red" id="r4"></FONT><FONT color="green" id="g4"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Re-enter Password</TD>
+<TD ><INPUT id="re1" type="password" size="70" name="repassword" maxlength="20" onkeyup="checkr()"></TD>
+<TD><FONT color="red" id="r5"></FONT><FONT color="green" id="g5"></FONT></TD>
+</TR>
+<TR>
+<TD rowspan="2" align="center">Gender</TD>
+<TD><INPUT type="radio" name="gender" value="Male">Male</TD>
+</TR>
+<TR>
+<TD><INPUT type="radio" name="gender" value="Female">Female</TD>
+</TR>
+<TR>
+<TD align="center" >Age</TD>
+<TD ><INPUT id="a1" type="text" size="70" name="Age" maxlength="20" onkeyup="checka()"></TD>
+<TD><FONT color="red" id="r6"></FONT><FONT color="green" id="g6"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Phone Number</TD>
+<TD ><INPUT id="ph1" type="tel" size="70" name="Phonenumber" maxlength="20" onkeyup="checkph()"></TD>
+<TD><FONT color="red" id="r7"></FONT><FONT color="green" id="g7"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Address</TD>
+<TD ><TEXTAREA id="ad1" name="address" cols="70" rows="5" onkeyup="checkad()"></TEXTAREA>
+<TD><FONT color="red" id="r8"></FONT><FONT color="green" id="g8"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >State</TD>
+<TD ><INPUT id="s1" type="text" size="70" name="state" maxlength="20" onkeyup="checks()"></TD>
+<TD><FONT color="red" id="r9"></FONT><FONT color="green" id="g9"></FONT></TD>
+</TR>
+<TR>
+<TD align="center" >Country</TD>
+<TD ><SELECT name="country">
+<OPTION value="India">India
+<OPTION value="USA">USA
+<OPTION value="UK">UK
+<OPTION value="France">France
+</SELECT></TD>
+</TR>
+<TR>
+<TD align="center" >Languages Known</TD>
+<TD ><INPUT type="checkbox" size="70" name="l1" maxlength="20" value="English">English
+<INPUT type="checkbox" size="70" name="l2" maxlength="20" value="Kannada">Kannada
+<INPUT type="checkbox" size="70" name="l3" maxlength="20" value="Hindi">Hindi
+<INPUT type="checkbox" size="70" name="l4" maxlength="20" value="Telugu">Telugu</TD>
+</TR>
+<TR colspan="2">
+<TD><INPUT type="checkbox" size="70" name="l4" maxlength="20" value="declarartion">Hereby I declare all the given details are true</TD>
+<TD></TD>
+</TR>
+<TR >
+<TD></TD>
+<TD align="right">Log in to <A href="https://ethnus.com/">Ethnus</A> website</TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER><INPUT type="submit" name="Register" value="Register" style="background-color:red;color:white;width:90px;height:30px;border-radius:7px;"></CENTER>
+</FORM>
+<SCRIPT>
+function checkf()
+{
+	var a=document.getElementById("f1").value;
+	var la=a.length;
+	//alert(la);
+	if(la<=2)
+	{
+		document.getElementById("r1").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r1").innerHTML="GOOD";
+	}
+}
+function checkl()
+{
+	var a=document.getElementById("l1").value;
+	var la=a.length;
+	//alert(la);
+	if(la<=2)
+	{
+		document.getElementById("r2").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r2").innerHTML="GOOD";
+	}
+}
+function checke()
+{
+	var a=document.getElementById("e1").value;
+	var la=a.length;
+	//alert(la);
+	if(la<=10)
+	{
+		document.getElementById("r3").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r3").innerHTML="GOOD";
+	}
+}
+function checka()
+{
+	var a=document.getElementById("a1").value;
+	var la=a.length;
+	//alert(la);
+	if(la==0)
+	{
+		document.getElementById("r6").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r6").innerHTML="GOOD";
+	}
+}
+function checkph()
+{
+	var a=document.getElementById("ph1").value;
+	var la=a.length;
+	//alert(la);
+	if(la==10)
+	{
+		document.getElementById("r7").innerHTML="GOOD";
+	}
+	else
+	{
+		document.getElementById("r7").innerHTML="POOR";
+	}
+}
+function checkad()
+{
+	var a=document.getElementById("ad1").value;
+	var la=a.length;
+	//alert(la);
+	if(la>=10)
+	{
+		document.getElementById("r8").innerHTML="GOOD";
+	}
+	else
+	{
+		document.getElementById("r8").innerHTML="POOR";
+	}
+}
+function checks()
+{
+	var a=document.getElementById("s1").value;
+	var la=a.length;
+	//alert(la);
+	if(la<3)
+	{
+		document.getElementById("r9").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r9").innerHTML="GOOD";
+	}
+}
+function checkp()
+{
+	var a=document.getElementById("p1").value;
+	var la=a.length;
+	//alert(la);
+	if(la<=7)
+	{
+		document.getElementById("r4").innerHTML="POOR";
+	}
+	else
+	{
+		document.getElementById("r4").innerHTML="GOOD";
+	}
+}
+function checkr()
+{
+	var a=document.getElementById("p1").value;
+	var la=a.length;
+	var b=document.getElementById("re1").value;
+	var lb=b.length;
+	if(la==lb)
+	{
+		if(a==b)
+		{
+			document.getElementById("r5").innerHTML="MATCHED";
+		}
+		else
+		{
+			document.getElementById("r5").innerHTML="MISMATCH";
+		}
+	}
+	if(lb<=7 && la!=lb)
+	{
+		document.getElementById("r5").innerHTML="POOR AND MISMATCH";
+	}
+}
+</SCRIPT>
+</BODY>
+</HTML>
